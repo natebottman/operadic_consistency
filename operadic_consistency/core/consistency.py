@@ -22,10 +22,8 @@
 # %autoreload 2
 
 # %%
-import operadic_consistency
-
 from dataclasses import dataclass
-from typing import Any, Mapping, MutableMapping, Optional, Sequence, Dict, List, Tuple
+from typing import Any, Mapping, MutableMapping, Optional, Sequence, Dict, List
 
 from operadic_consistency.core.toq_types import ToQ, NodeId, OpenToQ
 from operadic_consistency.core.interfaces import Answer, Answerer, Collapser, Normalizer, QuestionDecomposer

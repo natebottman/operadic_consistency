@@ -10,6 +10,9 @@ from operadic_consistency.core.transforms import OpenToQ
 
 
 class TinyAnswerer:
+    """
+    Mocks an LLM that can provide an answer for the specific questions in this example
+    """
     def __call__(self, question: str, *, context: Optional[str] = None) -> Answer:
         q = question.lower()
         if "when did ww2 end" in q:
