@@ -97,7 +97,10 @@ def run_consistency_check(
     if plan_opts is not None and "include_empty" in plan_opts:
         include_empty = bool(plan_opts["include_empty"])
 
-    plans = enumerate_collapse_plans(toq, include_empty=include_empty)
+    if plan_opts is not None and "plans_override" in plan_opts:
+        plans = list(plan_opts["plans_override"])
+    else:
+        plans = enumerate_collapse_plans(toq, include_empty=include_empty)
 
     if cache is None:
         cache = {}
